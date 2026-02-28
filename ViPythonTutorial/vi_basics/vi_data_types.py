@@ -11,7 +11,7 @@ Fundamental data types:
 1. int - 10, 20, -10, -20
 2. float - 0.3, 4.5, -5.6
 3. boolean -True, False 
-4. string - 
+4. string - anything which is written in "a" or 'vivek' or ''' ''' or """True"""
 5. complex numbers - a+bj
 
 Why we need to determine type of a data?

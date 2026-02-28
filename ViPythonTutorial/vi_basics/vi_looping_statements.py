@@ -9,23 +9,24 @@ A loop will be executed repeatedly until a condition is fulfilled
 
 Types of LS:
 
-1. While loop:
-    a. Initial variable
-    b. Condition
-    c. Increment/ decrement
+1. While loop
+    Components of while loop:
+        a. Initial variable
+        b. Condition
+        c. Increment/ decrement
 2. For loop
 
 Infinite Loop: Loop never stops execution
 
 '''
-'''
+
 count = 0 # Variable initialization
 
 while count < 5 : # Defining condition
     print("My name is Vivek")
     # count = count + 1 # Increment
     count += 1
-'''
+
 '''
 # Infinite loop creation:
 

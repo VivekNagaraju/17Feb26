@@ -8,9 +8,9 @@ Operator: A symbol which performs operation on one or more operand/s
 Operations:
 1. Arithmetic operation: addition(+), subtraction(-), multiplication(*), division(/), modulus(%), exponential(**), integer/ floor division(//); i/p - numerical; o/p - numerical
 2. Comparison/ relational operation: >, <, ==, >=, <=, !=; i/p: numerical, o/p: boolean;
-3. Logical operation: AND (&), OR (|), NOT; i/p: Boolean, o/p: Boolean
-4. Membership operation: in, not in
-5. Identity operation: is, is not
+3. Logical operation: and (&), or (|), not; i/p: Boolean, o/p: Boolean
+4. Membership operation: in, not in - check for an element in a group
+5. Identity operation: is, is not - check whether 2 variables/ objects identical
 6. Negation operation: -
 7. Assigning operation: =
 '''
@@ -20,9 +20,8 @@ b = -3
 c = a+b 
 print(f'Sum of {a} and {b} is', c)
 
+print(True and False)
 print(True & False)
-
-print(20^23)
 
 print(not False)
 
