@@ -83,7 +83,7 @@ for i in range(1, 100):
         break
     print(i)
 '''
-
+'''
 i = 1
 while i<=100:
     if i == 50:
@@ -91,6 +91,52 @@ while i<=100:
         continue
     print(i)   
     i += 1
-    
-    
+'''
 
+'''
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+1. Print star 5 times in a row --> for loop
+2. Switch to next line --> print()
+3. repeat Step 1 and 2 , 4 times --> use for loop
+
+'''   
+''' 
+i = 0
+while i <= 4:
+    print("* * * * *")
+    i += 1
+'''
+'''
+for i in range(5):
+    print("* * * * *")
+'''
+'''
+for j in range(5): # No. of lines
+    for i in range(5): # No. of stars
+        print("*", end=" ")    
+    print()
+'''
+'''
+*
+* *
+* * *
+* * * *
+* * * * *
+'''
+for j in range(1, 6): # No. of lines
+    for i in range(j): # No. of stars
+        print("*", end=" ")    
+    print()
+    
+'''
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
+'''
