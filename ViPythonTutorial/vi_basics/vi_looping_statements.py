@@ -14,19 +14,36 @@ Types of LS:
         a. Initial variable
         b. Condition
         c. Increment/ decrement
-2. For loop
+2. For loop: to iterate over a sequence/ range
 
 Infinite Loop: Loop never stops execution
 
-'''
+range:
+    start: from where sequence should start; default = 0
+    stop: end point. No default value (mandatory use should pass)
+    step: difference b/w sequence of integers produced; default = +1
+    
+Loop control statements/ keywords: control the execution of loops
+- break: Break the execution of a loop once for all when a condition is satisfied
+- continue: skip the execution of statements for one particular iteration.
+        Once continue statement is executed statements after that will be skipped
+        for that particular iteration. Loop will continue normally after that.
+        
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
 
+'''
+'''
 count = 0 # Variable initialization
 
 while count < 5 : # Defining condition
     print("My name is Vivek")
     # count = count + 1 # Increment
     count += 1
-
+'''
 '''
 # Infinite loop creation:
 
@@ -60,6 +77,20 @@ while count > 5:
     # count = count + 1 # Increment
     count = count + 1    
 '''
+'''
+for i in range(1, 100):
+    if i == 50:
+        break
+    print(i)
+'''
 
-
+i = 1
+while i<=100:
+    if i == 50:
+        i += 1
+        continue
+    print(i)   
+    i += 1
+    
+    
 
