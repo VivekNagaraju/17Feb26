@@ -128,15 +128,41 @@ for j in range(5): # No. of lines
 * * * *
 * * * * *
 '''
+'''
 for j in range(1, 6): # No. of lines
     for i in range(j): # No. of stars
         print("*", end=" ")    
-    print()
-    
+    print() # Switch line
+'''    
 '''
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+
+1 1 1 1 *
+1 1 1 * *
+1 1 * * *
+1 * * * *
+
+1. j = 1; *4 = 5-1
+2. j = 2; *3 = 5-2
+3. j = 3; *2 = 5-3
+4. j = 4; *1 = 5-4
+
 * * * * *
   * * * *
     * * *
       * *
         *
 '''
+for j in range(1, 6): # No. of lines
+    for i in range(5-j): # No. of 1s/ space
+        print(" ", end=" ")
+    
+    for i in range(j): # No. of stars
+        print("*", end=" ") 
+        
+    print()
+        
