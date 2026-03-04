@@ -13,6 +13,7 @@ Fundamental data types:
 3. boolean -True, False 
 4. string - anything which is written in "a" or 'vivek' or ''' ''' or """True"""
 5. complex numbers - a+bj
+6. NoneType
 
 Why we need to determine type of a data?
 - based on data types certain operations will be performed
@@ -51,3 +52,7 @@ print(type(e))
 f = "4"
 print(f)
 print(type(f))
+
+g = None
+print(g)
+print(type(g))
