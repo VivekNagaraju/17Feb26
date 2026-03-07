@@ -19,7 +19,20 @@ Accessing: Fetching elements from a DS
         Types of Indexing
         a. Positive index: Left -> Right; starts with 0, 1, 2...
         b. Negative index: Right -> Left; starts with -1, -2, -3....
+    3. Using slicing operator: to access group of elements based on index values
+        Syntax: list_name[start_index : stop_index : step_value]
+        start_index: default value: 0/-1; inclusive
+        stop_index: default value: len(list)/-(len(list)+1) ; exclusive
+        step_value: default value: +1
+        
+        when step is +ve: start_index  < stop_index
+        when step is -ve: start_index  > stop_index
+        
+Modification:
+    - Re-initialization using index
+    - List is mutable: list once created can be modified
     
+        
 '''
 a = [] # Creating an empty list
 print(a)
@@ -44,3 +57,54 @@ for i in c:
 # Accessing using Index: ds_name[index_value]
 print("d[5]:", d[5])
 print("d[-5]", d[-5])
+
+'''
+print(b[0])
+print(b[1])
+print(b[2])
+print(b[3])
+print(b[4])
+'''
+print("======Accessing using while loop========")
+index = 0
+while index < len(b) :
+    print(b[index])
+    index += 1
+
+print("======Accessing using slicing operator=======")
+print("c:", c)
+print("c[::]:", c[::])
+print("c[:5:]:", c[:5:])
+print("c[:6:]:", c[:6:])
+print("c[::2]:", c[::2])
+print("c[-1:-7:-1]:", c[-1:-7:-1])
+print("c[::-1]:", c[::-1])
+print("c[0:7:1]:", c[0:7:1])
+print("c[-1:-7:]:", c[-1:-7:])
+print("c[-2:-7:]:", c[-2:-7:])
+print("c[-7:-1:]:", c[-7:-1:])
+
+c[4] = False
+print("c:", c)
+
+print("========Predefined  functions========")
+print("b:", b)
+b.append(99)
+print("b:", b)
+b.extend(c)
+print("b:", b)
+b.append(c)
+print("b:", b)
+print("b.count(3):", b.count(3))
+print("b.index(3):", b.index(3))
+print("b.index(3, 1):", b.index(3, 1))
+b.insert(5, 101)
+print("b:", b)
+
+f = [2, 4, 5, 6, 2, 4, 7, 8, 9, 9, 28, 7, 9]
+# Print above list in the console
+# Ask user to select a number from the displayed list and take the input
+# Display the number of occurrences of the element selected
+# Display the indices of the element in the list 
+
+

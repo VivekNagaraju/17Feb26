@@ -56,3 +56,4 @@ print(type(f))
 g = None
 print(g)
 print(type(g))
+
