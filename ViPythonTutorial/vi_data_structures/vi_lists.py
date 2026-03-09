@@ -8,9 +8,10 @@ List:
 Creation:
     1. An empty list can be created
     2. List with data elements:
-        a. Homogeneous
-        b. Heterogeneous
-    3. using built-in function
+        a. Homogeneous list can be created
+        b. Heterogeneous list can be created
+        c. List can have duplicate elements
+    3. List can be created using built-in function
     
 Accessing: Fetching elements from a DS
     1. Using Loops
@@ -98,6 +99,7 @@ print("b:", b)
 print("b.count(3):", b.count(3))
 print("b.index(3):", b.index(3))
 print("b.index(3, 1):", b.index(3, 1))
+# b.index(value, start, stop)
 b.insert(5, 101)
 print("b:", b)
 
