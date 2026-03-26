@@ -31,6 +31,12 @@ Functions: A function is a group of statements or a block of code which perform
     After defining a function we can call it using its name by passing the parameters if required  
     
 Return Keyword: using return a function can return value to the user 
+
+1. A function can call another function
+2. We can pass a function as a parameter/ value to another function
+3. We can assign a function to a variable
+4. We can define a function inside another function
+5. We can return a function from another function
 '''
 a = 4
 b = 7
@@ -52,7 +58,9 @@ def add(a, b): # defining the function # function with parameters
     
 def start_msg(): # Function without parameters
     print("Welcome to iQuest!!")
-    print("Let's start programming...")
+    def sec_msg():
+        print("Let's start programming...")
+    sec_msg()
     
 def mul(a, b):
     c = a*b
@@ -66,9 +74,14 @@ def composite(a, b): # calling a function inside another function
     d = mul(a, b)
     return c, d
     
-    
+def first_fun():
+    def sec_fun():
+        print("This is sec function")   
+    return sec_fun
+
+
 # calling the function
-start_msg()
+start_msg() 
 print(add(34, 56))
 # d = add(23, 14)
 # print(d*2)
@@ -78,6 +91,8 @@ e, f = composite(10, 20)
 print(e)
 print(f)
 
+g = add # Assigning function to a variable
+print(g(100, 200)) # call the function using new variable
 
-
-
+h = first_fun() # h = sec_fun # Assigning function to a variable
+h() # call the function using new variable
