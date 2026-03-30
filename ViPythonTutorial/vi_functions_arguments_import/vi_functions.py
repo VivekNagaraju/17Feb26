@@ -132,7 +132,7 @@ def factorial(n):
     if n == 0:
         result = 1
     else:
-        result = n*factorial(n-1)
+        result = n*factorial(n-1) # calling a function inside the same function
     return result
 
 print("factorial(4):",factorial(4))
