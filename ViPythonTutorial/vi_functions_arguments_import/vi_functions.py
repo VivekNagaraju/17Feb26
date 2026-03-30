@@ -37,6 +37,19 @@ Return Keyword: using return a function can return value to the user
 3. We can assign a function to a variable
 4. We can define a function inside another function
 5. We can return a function from another function
+6. A function calling the same function - recursive functions
+
+Ex: Factorial: 
+    4!  = 4*3*2*1
+        = 4*3!
+        = 4*3*2!
+        = 4*3*2*1!
+        = 4*3*2*1*0!
+        
+    n! = n*(n-1)!
+    
+Q. Write a program to find the factorial of any integer
+
 '''
 a = 4
 b = 7
@@ -96,3 +109,30 @@ print(g(100, 200)) # call the function using new variable
 
 h = first_fun() # h = sec_fun # Assigning function to a variable
 h() # call the function using new variable
+
+'''
+Factorial: 
+    4!  = 4*3*2*1
+        = 4*3!
+        = 4*3*2!
+        = 4*3*2*1!
+        = 4*3*2*1*0!
+        
+    n!  = n*(n-1)! when n != 0
+    n!  = 1 when n = 0
+    
+    4!  = 4*factorial(3)
+        = 4*3*factorial(2)
+        = 4*3*2*factorial(1)
+        = 4*3*2*1*factorial(0)
+        = 4*3*2*1*0*factorial(-1)
+'''
+
+def factorial(n):
+    if n == 0:
+        result = 1
+    else:
+        result = n*factorial(n-1)
+    return result
+
+print("factorial(4):",factorial(4))
