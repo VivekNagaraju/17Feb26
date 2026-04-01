@@ -50,6 +50,13 @@ Ex: Factorial:
     
 Q. Write a program to find the factorial of any integer
 
+7. Lambda Functions (nameless functions/ pseudo functions/ anonymous functions):
+A simple function defined in a single line without actual naming syntax
+We use 'lambda' keyword to define a function
+Syntax:
+
+variable_name = lambda parameters : expression
+
 '''
 a = 4
 b = 7
@@ -136,3 +143,7 @@ def factorial(n):
     return result
 
 print("factorial(4):",factorial(4))
+
+print("====== lambda functions ======")
+addition = lambda a,b : a+b
+print("addition(3, 6):",addition(3, 6))
