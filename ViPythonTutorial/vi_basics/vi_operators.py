@@ -18,7 +18,9 @@ Operations:
 a = 200
 b = -3
 c = a+b 
-print(f'Sum of {a} and {b} is', c)
+print(f'Sum of {a} and {b}:', c)
+print('Sum of {x} and {y} is {z}'.format(y=b, z=c, x=a))
+print('Sum of {0} and {1} is {2}'.format(a, b, c))
 
 print(True and False)
 print(True & False)
