@@ -30,7 +30,8 @@ def add(a=0, b=0): # Default arguments
 def sub(a, b):
     c = a-b
     return c
-    
+
+'''    
 print(add(4, 5))
 print(sub(4, 5)) # Positional arguments
 print(sub(b=4, a=5)) # Keyword arguments
@@ -42,11 +43,12 @@ print()
 print(1)
 print(1, 3, 4)
 print(5, 3, 4, 5, 2)
+'''
 #Variable length arguments
 def var_len(*a): # we can pass any number of positional arguments
     print(a)
-var_len(1, 2, 3, 4, 6)
-var_len(1, 2)
+# var_len(1, 2, 3, 4, 6)
+# var_len(1, 2)
 # var_len(x=1, y=2) #TypeError: var_len() got an unexpected keyword argument 'x'
 # Q. Define an add function which accepts any number of values and gives the total
 
@@ -54,5 +56,5 @@ var_len(1, 2)
 def kw_var_len(**a): # we can pass any number of keyword arguments
     print(a)
 
-kw_var_len(x=3, y=8, z=9)
+# kw_var_len(x=3, y=8, z=9)
 # kw_var_len(3) #TypeError: kw_var_len() takes 0 positional arguments but 1 was given

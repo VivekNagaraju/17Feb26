@@ -12,6 +12,7 @@ Functions: A function is a group of statements or a block of code which perform
         
     Types of functions:
         1. Pre-defined functions: Available at the time of Python installation
+            a. built-in functions
             Ex: print(), id(), type()........
         2. User defined functions: Defined by users
             Ex: add()
