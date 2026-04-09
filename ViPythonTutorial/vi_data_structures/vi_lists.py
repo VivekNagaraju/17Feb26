@@ -109,4 +109,4 @@ f = [2, 4, 5, 6, 2, 4, 7, 8, 9, 9, 28, 7, 9]
 # Display the number of occurrences of the element selected
 # Display the indices of the element in the list 
 
-
+print("Type of f:", type(f))
