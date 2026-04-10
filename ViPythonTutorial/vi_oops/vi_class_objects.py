@@ -36,5 +36,11 @@ car2.start()
 car1.move_forward()
 car2.move_forward()     
       
-        
+print("car1.name:", car1.name)
+print("car2.name:", car2.name) 
+'''
+self.name
+car1.name
+car2.name
+'''
         
