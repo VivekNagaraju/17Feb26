@@ -15,6 +15,7 @@ options.add_argument("start-maximized")
 
 # Creating webdriver object
 driver = webdriver.Chrome(options)
+driver.implicitly_wait(20)
 
 '''2. Navigating to a web page'''
 driver.get("https://testautomationpractice.blogspot.com/")
