@@ -41,3 +41,9 @@ sr_input_txtbx.send_keys('Vivek')
 '''6. Click on check box in shadow dom'''
 sr_checkbx = shadow_root_auto.find_element(By.CSS_SELECTOR, 'input[type=checkbox]:nth-child(7)')
 sr_checkbx.click()
+
+'''
+ins > span > svg > path
+/html/body/ins[2]/div[1]//ins/span/svg/path
+/html/body//*[name()='ins'][2]/div[1]//*[name()='ins']/span//*[name()='svg']//*[local-name='path']
+'''
