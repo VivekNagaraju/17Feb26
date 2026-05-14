@@ -44,16 +44,16 @@ class Child(Father, Mother):
         print("This is Child's car")
 
 print("======GrandFather Object=======")        
-# ajja = GrandFather()
+ajja = GrandFather()
 # ajja.gf_method()
 
 print("======Father Object=======")
-# appa = Father()
+appa = Father()
 # appa.f_method()
 # appa.gf_method()
 
 print("======Child Object=======")
-# naanu = Child()
+naanu = Child()
 # naanu.c_method()
 # naanu.f_method()
 # naanu.gf_method()
@@ -61,5 +61,5 @@ print("======Child Object=======")
 # naanu.car_method()
 
 print("=====Method Resolution Order(MRO)=====")
-# print(Child.mro())
+print(Child.mro())
 
