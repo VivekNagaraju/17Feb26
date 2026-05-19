@@ -18,15 +18,19 @@ Method Resolution Order(MRO)
 
 class GrandFather:
     def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        print("This is GF Constructor")
+        print("Constructor is called")
         print(f"An Object is created with name:{name} and age:{age}")
         
     def gf_method(self):
         print("This is GrandFather method")
         
 class Father(GrandFather):
+    def __init__(self, name, age, dob):
+        # print("Constructor is called")
+        # print(f"An Object is created with name:{name}, age:{age}")
+        super().__init__(name, age)
+        print(f"Object born on {dob}")
+        
     def f_method(self):
         print("This is Father method")
         
@@ -53,7 +57,7 @@ ajja = GrandFather("Gaddappa", 110)
 # ajja.gf_method()
 
 print("======Father Object=======")
-appa = Father("Nammappa", 65)
+appa = Father("Nammappa", 65, "19/5/2000")
 # appa.f_method()
 # appa.gf_method()
 
@@ -61,7 +65,7 @@ print("======Mother Object=======")
 amma = Mother()
 
 print("======Child Object=======")
-naanu = Child("Magu", 25)
+naanu = Child("Magu", 25, "19/5/2026")
 # naanu.c_method()
 # naanu.f_method()
 # naanu.gf_method()
