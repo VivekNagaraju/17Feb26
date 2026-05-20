@@ -11,8 +11,11 @@ Morph = Form
 "One thing in many forms"
 
 Types of Polymorphism:
-1. Overloading
-2. Overriding
+1. Overloading:
+    a. Operator Overloading: + -> addition, concatination and list extension
+    b. Constructor Overloading
+    c. Method Overloading
+2. Overriding:
     a. Constructor overriding
     b. Method overriding
 

@@ -16,11 +16,12 @@ Types of inheritance:
 Method Resolution Order(MRO)
 '''
 
+
 class GrandFather:
     def __init__(self, name, age):
         print("Constructor is called")
         print(f"An Object is created with name:{name} and age:{age}")
-        
+    
     def gf_method(self):
         print("This is GrandFather method")
         
@@ -50,10 +51,12 @@ class Child(Father, Mother):
         print("This is Child method")
         
     def car_method(self):
-        print("This is Child's car")        
-
+        print("This is Child's car")
+        
+         
+# "Gaddappa", 110
 print("======GrandFather Object=======")        
-ajja = GrandFather("Gaddappa", 110)
+ajja = GrandFather()
 # ajja.gf_method()
 
 print("======Father Object=======")

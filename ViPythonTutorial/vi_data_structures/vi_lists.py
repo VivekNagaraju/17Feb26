@@ -110,3 +110,7 @@ f = [2, 4, 5, 6, 2, 4, 7, 8, 9, 9, 28, 7, 9]
 # Display the indices of the element in the list 
 
 print("Type of f:", type(f))
+f.sort()
+print("f.sort():", f)
+f.sort(reverse=True)
+print("f.sort(reverse=True):", f)
