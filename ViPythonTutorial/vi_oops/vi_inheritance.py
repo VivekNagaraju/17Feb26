@@ -18,7 +18,7 @@ Method Resolution Order(MRO)
 
 
 class GrandFather:
-    def __init__(self, name, age):
+    def __init__(self, name=None, age=0):
         print("Constructor is called")
         print(f"An Object is created with name:{name} and age:{age}")
     
