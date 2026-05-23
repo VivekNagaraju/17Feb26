@@ -6,8 +6,13 @@ Created on 22-May-2026
 Abstraction:
 
 Abstract:
+
+Interfaces: Class containing abstract methods only
 '''
-class CarClass:
+from abc import ABC, abstractmethod
+
+
+class CarClass(ABC):
     def __init__(self, name, color, model): # Constructor: method used to construct an Object
         print(f"A {color} color {name} car is created in the year {model}")
         self.name = name
@@ -25,14 +30,17 @@ class CarClass:
         
     def stop(self): # implemented method
         print(f"{self.name} has stopped")
-        
+    
+    @abstractmethod    
     def drive_train(self): # unimplemented method
         pass
     
 class HatchBackCar(CarClass):
-    pass
-    
+    def drive_train(self):
+        print("Front Wheel Drive(FWD) implemented")
+
 swift = HatchBackCar("Swift", "white", 2026)
 swift.start()
+swift.drive_train()
     
     
