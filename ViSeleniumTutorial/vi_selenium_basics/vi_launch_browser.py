@@ -4,6 +4,7 @@ Created on 12-Apr-2026
 @author: Vivek
 '''
 from selenium import webdriver
+from selenium.webdriver.support import expected_conditions
 
 '''1. Launch Chrome browser'''
 
@@ -21,4 +22,3 @@ driver.get("https://www.selenium.dev/")
 '''3. Print the current page title'''
 current_page_title = driver.title
 print("current_page_title:", current_page_title)
-
