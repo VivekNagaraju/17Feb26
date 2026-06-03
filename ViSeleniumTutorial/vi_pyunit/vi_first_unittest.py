@@ -16,7 +16,20 @@ class TestLoginPage(unittest.TestCase):
 
 
     def test_navigate_to_login_page(self):
-        pass
+        # 1. Launch Chrome browser
+        options = webdriver.ChromeOptions()
+        options.add_experimental_option("detach", True)
+        options.add_argument("start-maximized")
+        
+        driver = webdriver.Chrome(options)
+        driver.implicitly_wait(10)
+        
+        # 2. Navigate to OrangeHRM Login page
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+        
+        # 6. Validate whether "login" is present in Current page URL
+        current_page_url = driver.current_url
+        self.assertIn("login", current_page_url, "Navigation failed")
     
     def test_login_to_orangehrm(self):
         # 1. Launch Chrome browser
@@ -32,7 +45,7 @@ class TestLoginPage(unittest.TestCase):
         
         # 3. Enter Username
         user_wrt = driver.find_element(By.NAME, 'username')
-        user_wrt.send_keys('admin1')
+        user_wrt.send_keys('admin')
         
         # 4. Enter Password
         pass_word = driver.find_element(By.NAME, 'password')
