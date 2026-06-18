@@ -1,0 +1,45 @@
+'''
+Created on 18-Jun-2026
+
+@author: Vivek
+'''
+from openpyxl import load_workbook
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+# 1. Loading the workbook
+filename = r"D:\TestData\OrangeHRMLoginPageDDT.xlsx"
+my_workbook = load_workbook(filename)
+
+# 2. Set the active sheet
+sheet1 = my_workbook["Sheet1"]
+
+# 3. Fetch and print a cell value
+username = sheet1.cell(2,2).value
+print("username:", username)
+
+password = sheet1.cell(2,3).value
+print("password:", password)
+
+# 1. Launch Chrome browser
+options = webdriver.ChromeOptions()
+options.add_experimental_option("detach", True)
+options.add_argument("start-maximized")
+
+driver = webdriver.Chrome(options)
+driver.implicitly_wait(10)
+
+# 2. Navigate to OrangeHRM Login page
+driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+
+# 3. Enter Username
+user_wrt = driver.find_element(By.NAME, 'username')
+user_wrt.send_keys(username)
+
+# 4. Enter Password
+pass_word = driver.find_element(By.NAME, 'password')
+pass_word.send_keys(password)
+
+# 5. Click on Login Button
+login_clk = driver.find_element(By.TAG_NAME,'button')
+login_clk.click()
