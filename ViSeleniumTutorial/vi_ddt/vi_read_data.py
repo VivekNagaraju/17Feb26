@@ -14,13 +14,24 @@ my_workbook = load_workbook(filename)
 # 2. Set the active sheet
 sheet1 = my_workbook["Sheet1"]
 
-# 3. Fetch and print a cell value
-username = sheet1.cell(2,2).value
-print("username:", username)
+total_cols = sheet1.max_column
+print('total_cols:', total_cols)
+total_rows = sheet1.max_row
+print('total_rows:', total_rows)
+print("==========================")
 
-password = sheet1.cell(2,3).value
-print("password:", password)
+for i in range(2, total_rows+1):
 
+    # 3. Fetch and print a cell value
+    username = sheet1.cell(i,2).value
+    print("username:", username)
+    
+    password = sheet1.cell(i,3).value
+    print("password:", password)
+    
+    print("==========================")
+
+'''
 # 1. Launch Chrome browser
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
@@ -43,3 +54,4 @@ pass_word.send_keys(password)
 # 5. Click on Login Button
 login_clk = driver.find_element(By.TAG_NAME,'button')
 login_clk.click()
+'''
