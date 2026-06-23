@@ -69,7 +69,11 @@ for i in range(2, total_rows+1):
     
     if expected_url in current_page_url:
         print("Test Case Passed")
+        sheet1.cell(i,5).value = "Passed"
+        my_workbook.save(filename)
     else:
         print("Test Case Failed")
+        sheet1.cell(i,5).value = "Failed"
+        my_workbook.save(filename)
         
     print("==========================")
