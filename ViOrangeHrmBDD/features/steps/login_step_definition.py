@@ -17,6 +17,7 @@ def step_launch_chrome_browser(context):
     
     context.driver = webdriver.Chrome(options)
     context.driver.implicitly_wait(10)
+    context.wait = WebDriverWait(context.driver, timeout=10)
 
 
 @when(u'User navigates to Login Page URL')
@@ -25,7 +26,31 @@ def step_navigate_orangehrm_login_page(context):
 
 
 @then(u'User should see login in current page URL')
-def step_validate_login_page(context):
+def step_validate_login_page_url(context):
     current_page_url = context.driver.current_url
     print(context.driver.current_url)
     assert "login" in current_page_url, "Navigation Failed"
+    
+@when(u'User enters username')
+def step_enter_username(context):
+    username_textbox = context.wait.until(EC.visibility_of_element_located((By.NAME, 'username')))
+    username_textbox.send_keys("Admin")
+
+
+@when(u'User enters password')
+def step_enter_password(context):
+    password_textbox = context.wait.until(EC.visibility_of_element_located((By.NAME, 'password')))
+    password_textbox.send_keys("admin123")
+
+
+@when(u'User clicks on login button')
+def step_click_login_button(context):
+    login_button = context.driver.find_element(By.TAG_NAME,'button')
+    login_button.click()
+
+
+@then(u'User should see dashboard in current page URL')
+def step_validate_dashboard_url(context):
+    current_page_url = context.driver.current_url
+    print(context.driver.current_url)
+    assert "dashboard" in current_page_url, "Navigation Failed"
