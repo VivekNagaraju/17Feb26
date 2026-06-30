@@ -53,4 +53,16 @@ def step_click_login_button(context):
 def step_validate_dashboard_url(context):
     current_page_url = context.driver.current_url
     print(context.driver.current_url)
-    assert "dashboard" in current_page_url, "Navigation Failed"
+    assert "dashboard" in current_page_url, "Login Failed"
+    
+    
+@when(u'User enters username {username}')
+def step_enter_username_parameter(context, username):
+    username_textbox = context.wait.until(EC.visibility_of_element_located((By.NAME, 'username')))
+    username_textbox.send_keys(username)
+
+
+@when(u'User enters password {password}')
+def step_enter_password_parameter(context, password):
+    password_textbox = context.wait.until(EC.visibility_of_element_located((By.NAME, 'password')))
+    password_textbox.send_keys(password)
